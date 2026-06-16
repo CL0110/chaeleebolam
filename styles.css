@@ -262,16 +262,27 @@ button[type="submit"]:hover { background: var(--teal); }
 /* Work/Portfolio */
 .work-section { padding: 4rem 0; }
 
-.work-section h2 {
-    font-size: 1.5rem;
-    color: var(--navy);
+.work-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.work-column-header {
+    font-size: 0.9rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
 }
 
@@ -283,7 +294,7 @@ button[type="submit"]:hover { background: var(--teal); }
     box-shadow: var(--shadow);
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -292,17 +303,15 @@ button[type="submit"]:hover { background: var(--teal); }
 }
 
 .project-card img {
-    width: 280px;
-    flex-shrink: 0;
+    width: 100%;
+    height: 180px;
     object-fit: cover;
     display: block;
-    order: 2;
 }
 
 .project-card-content {
-    padding: 2rem;
+    padding: 1.5rem 1.5rem 2rem;
     flex: 1;
-    order: 1;
 }
 
 .project-card h3 {
@@ -438,7 +447,7 @@ footer {
     }
 
     .services-grid { grid-template-columns: 1fr; }
-    .project-grid { grid-template-columns: 1fr; }
+    .work-columns { grid-template-columns: 1fr; }
     .project-card { flex-direction: column; }
     .project-card img { width: 100%; height: 200px; order: 1; }
     .project-card-content { order: 2; }
