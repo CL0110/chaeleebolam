@@ -257,7 +257,7 @@ button[type="submit"]:hover { background: var(--teal); }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
@@ -265,14 +265,30 @@ button[type="submit"]:hover { background: var(--teal); }
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 2rem;
+    overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: stretch;
 }
 
 .project-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 280px;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: block;
+    order: 2;
+}
+
+.project-card-content {
+    padding: 2rem;
+    flex: 1;
+    order: 1;
 }
 
 .project-card h3 {
@@ -409,5 +425,8 @@ footer {
 
     .services-grid { grid-template-columns: 1fr; }
     .project-grid { grid-template-columns: 1fr; }
+    .project-card { flex-direction: column; }
+    .project-card img { width: 100%; height: 200px; order: 1; }
+    .project-card-content { order: 2; }
     .resume-entry-header { flex-direction: column; }
 }
