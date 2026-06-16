@@ -42,12 +42,10 @@ nav .container {
 }
 
 nav .nav-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: contain;
-    background: white;
-    padding: 4px;
+    height: 36px;
+    width: auto;
+    border-radius: 4px;
+    display: block;
     flex-shrink: 0;
 }
 
