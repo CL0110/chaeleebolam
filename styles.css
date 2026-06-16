@@ -401,6 +401,73 @@ button[type="submit"]:hover { background: var(--teal); }
     line-height: 1.7;
 }
 
+/* Publications */
+.publications-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.publication-card {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--teal);
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+}
+
+.publication-card .pub-journal {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.6rem;
+}
+
+.publication-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.publication-card .pub-authors {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.publication-card .pub-authors strong {
+    color: var(--text);
+}
+
+.publication-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.publication-card .pub-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.publication-card .pub-meta span::before {
+    content: '· ';
+}
+
+.publication-card .pub-meta span:first-child::before {
+    content: '';
+}
+
 /* Blog */
 .blog-section { padding: 4rem 0; }
 
