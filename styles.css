@@ -87,8 +87,8 @@ nav a:hover { color: var(--white); }
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    object-fit: contain;
-    background: #eef2f7;
+    object-fit: cover;
+    object-position: center 20%;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     margin-bottom: 1rem;
 }
